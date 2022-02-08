@@ -4,8 +4,6 @@ WORKDIR /BashImRandBot
 
 COPY . /BashImRandBot
 
-RUN pip install pipenv
-
-RUN pipenv install --system --deploy
+RUN pip install pipenv && pipenv install --system --deploy
 
 CMD ["python", "/BashImRandBot/bot.py"]
